@@ -9,7 +9,7 @@ configure-rust:
 .PHONY: init
 init:
 	make configure-rust
-	git submodule update --init --recursive
+# 	git submodule update --init --recursive
 
 .PHONY: release
 release:
