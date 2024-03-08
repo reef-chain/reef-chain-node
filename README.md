@@ -143,3 +143,10 @@ make chain=testnet fork
 cd fork/data
 ./binary --chain fork.json --alice
 ```
+
+### Connecting with peers
+If running a node doesn't connect to peers automatically you can specify `-- bootnodes` flag. For mainnet with value:
+`--bootnodes /dns/mainnet-bootnode1.reefscan.info/tcp/30333/ws/p2p/12D3KooWFHSc9cUcyNtavUkLg4VBAeBnYNgy713BnovUa9WNY5pp`
+
+For testnet:
+`--bootnodes /dns/testnet-bootnode1.reefscan.info/tcp/30333/ws/p2p/12D3KooWCucVs4CFNnAf1R9hoChCHGajNPrbb3eHyKYY4sKhGeM1`
