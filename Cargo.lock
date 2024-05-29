@@ -9941,7 +9941,7 @@ dependencies = [
 [[package]]
 name = "xcm"
 version = "0.9.10"
-source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.10#aeea9b7bd81919e014f7621f6c4b2eb9709d918f"
+source = "git+https://github.com/paritytech/polkadot?tag=v0.9.10#aeea9b7bd81919e014f7621f6c4b2eb9709d918f"
 dependencies = [
  "derivative",
  "impl-trait-for-tuples 0.2.1",
@@ -9953,7 +9953,7 @@ dependencies = [
 [[package]]
 name = "xcm-procedural"
 version = "0.1.0"
-source = "git+https://github.com/paritytech/polkadot?branch=release-v0.9.10#aeea9b7bd81919e014f7621f6c4b2eb9709d918f"
+source = "git+https://github.com/paritytech/polkadot?tag=v0.9.10#aeea9b7bd81919e014f7621f6c4b2eb9709d918f"
 dependencies = [
  "proc-macro2",
  "quote",
