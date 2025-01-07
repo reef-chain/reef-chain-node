@@ -187,6 +187,62 @@ pub fn public_testnet_config() -> Result<ChainSpec, String> {
 			// authority-discovery
 			vec![
 				(
+					hex!["c6c9a20163d0fa52402e464624bc2ef208ca96675bcf4540fc4744b833bad037"].into(),
+					hex!["16fcbf71e3950eb9cf51e52974949b04faec2bdd4b6c3ce5af22ffff19a4674c"].into(),
+					hex!["2b2bfbaee369b5d39d9d1910619499fc0e14454c9908316f1d7612f1191eb8e9"].unchecked_into(),
+					hex!["1a156237ed6a85c3057746092bd2b54f8036ec8ccbdb9895fe230f71663ae44e"].unchecked_into(),
+					hex!["1cca2c88500d9fd481ca70e2a4f442d0e0717f9d673a36e781078907852f4e22"].unchecked_into(),
+					hex!["16c4a7963a9b374b518e4527579776792c7789a4e96fdc998aa8ec8fcb44092f"].unchecked_into(),
+				),
+				(
+					hex!["1a9b0341232db082e8905e3778a9d7870b14e4735999e273c9680327ffdd300a"].into(),
+					hex!["b6977143ce7d8e002916137be5b652480fd08379aa69e443fe2ba30f7980d962"].into(),
+					hex!["a4a9100cff1efa1ec40d7eb2354f4e89458b214f38f82fa29a985b24baa6bbab"].unchecked_into(),
+					hex!["308d3b9b712586d8aff56fac7b28ed6a3539ce2d741eb6c49ae07dd5d016ae52"].unchecked_into(),
+					hex!["44485401d358de27271dd80041ef14b7958fde7d640bea9847c19f612a7b915e"].unchecked_into(),
+					hex!["fc863894738d680ef85fb10da7f97d4d13588d98d4b601145221169d1ea51768"].unchecked_into(),
+				),
+			],
+			// Sudo
+			hex!["2c9574264c41552289994561287e6cf026f21b6aea773af4a1e5454c23101c0d"].into(),
+			// Endowed accounts
+			vec![
+				hex!["6abe852bc641cc1fdae982486360182d61a898e04ae37b1fe7242af33723b00c"].into(),
+				hex!["44a9df83a4aaf9d5decaa90cc3bf8ccabd68997d20cabbc81f7c78af8f702f27"].into(),
+				hex!["5c52b967749735dc3a396bdb177d0896d6a05a667c6f4ff1872d23db4959883b"].into(),
+			],
+		),
+		// Bootnodes
+		vec!["/dns/bootnode-t1.reefscan.info/tcp/30333/p2p/12D3KooWKJUNZLSpJ4WeARmrctswDEa57JsXCi8FCF1seEkQHMVg".parse().unwrap()],
+		// Telemetry
+		TelemetryEndpoints::new(vec![(TELEMETRY_URL.into(), 0)]).ok(),
+		// Protocol ID
+		Some("reef_testnet"),
+		// Properties
+		Some(reef_properties()),
+		// Extensions
+		Default::default(),
+	))
+}
+/*pub fn public_testnet_config() -> Result<ChainSpec, String> {
+	let wasm_binary = WASM_BINARY.ok_or_else(|| "WASM binary not available".to_string())?;
+	Ok(ChainSpec::from_genesis(
+		// Name
+		"Reef Testnet",
+		// ID
+		"reef_testnet",
+		ChainType::Live,
+		move || testnet_genesis(
+			wasm_binary,
+			// Initial authorities keys:
+			// stash
+			// controller
+			// grandpa
+			// babe
+			// im-online
+			// authority-discovery
+			vec![
+				(
 					hex!["b2902b07056f7365bc22bf7e69c4e4fdba03e6af9c73ca6eb1703ccbc0248857"].into(),
 					hex!["cc2ea454844cc1a2e821198d9e0ce1de1aee7d014af5dd3404fc8199df89f821"].into(),
 					hex!["607712f6581e191b69046427a7e33c4713e96b4ae4654e2467c74279dc20beb2"].unchecked_into(),
@@ -232,7 +288,7 @@ pub fn public_testnet_config() -> Result<ChainSpec, String> {
 		Default::default(),
 	))
 }
-
+*/
 
 pub fn live_mainnet_config() -> Result<ChainSpec, String> {
 	ChainSpec::from_json_bytes(&include_bytes!("../../assets/chain_spec_mainnet_raw.json")[..])

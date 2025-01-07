@@ -1,0 +1,18 @@
+#COPY & RUN FROM TERMINAL/COMMAND LINE
+
+SECRET="SOME_MNEMONIC"
+SUBKEY_PATH="$HOME/test/polkadot-sdk/target/release/subkey"
+echo "////////"
+
+for i in 1 2; do for j in babe; do for k in babe; do $SUBKEY_PATH inspect --scheme sr25519 "$SECRET//$i//$j"|sed -n -e 5p|cut -d ":" -f 2|xargs echo|{varr=$(cat); echo "curl http://localhost:9933 -H \"Content-Type:application/json;charset=utf-8\" -d   '{ \"jsonrpc\":\"2.0\", \"id\":1, \"method\":\"author_insertKey\", \"params\": [ \"$k\", \"$SECRET//$i//$j\", \"$varr\"   ] }'";} done; done; done
+
+
+echo "////////"
+for i in 1 2; do for j in im_online; do for k in imon; do $SUBKEY_PATH inspect --scheme sr25519 "$SECRET//$i//$j"|sed -n -e 5p|cut -d ":" -f 2|xargs echo|{varr=$(cat); echo "curl http://localhost:9933 -H \"Content-Type:application/json;charset=utf-8\" -d   '{ \"jsonrpc\":\"2.0\", \"id\":1, \"method\":\"author_insertKey\", \"params\": [ \"$k\", \"$SECRET//$i//$j\", \"${varr}\"   ] }'";} done; done; done
+
+echo "////////"
+for i in 1 2; do for j in authority_discovery; do for k in audi; do $SUBKEY_PATH inspect --scheme sr25519 "$SECRET//$i//$j"|sed -n -e 5p|cut -d ":" -f 2|xargs echo|{varr=$(cat); echo "curl http://localhost:9933 -H \"Content-Type:application/json;charset=utf-8\" -d   '{ \"jsonrpc\":\"2.0\", \"id\":1, \"method\":\"author_insertKey\", \"params\": [ \"$k\", \"$SECRET//$i//$j\", \"${varr}\"   ] }'";} done; done; done
+
+
+echo "////////"
+for i in 1 2; do for j in grandpa; do for k in gran; do $SUBKEY_PATH inspect --scheme ed25519 "$SECRET//$i//$j"|sed -n -e 5p|cut -d ":" -f 2|xargs echo|{varr=$(cat); echo "curl http://localhost:9933 -H \"Content-Type:application/json;charset=utf-8\" -d   '{ \"jsonrpc\":\"2.0\", \"id\":1, \"method\":\"author_insertKey\", \"params\": [ \"$k\", \"$SECRET//$i//$j\", \"${varr}\"   ] }'";} done; done; done

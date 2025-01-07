@@ -1,0 +1,15 @@
+FROM rust:1.59.0 as build
+
+RUN rustup default nightly-2021-05-09
+RUN apt-get update && apt-get install -y clang
+
+WORKDIR /build
+COPY . /build
+RUN make genesis
+
+FROM ubuntu:20.04
+
+COPY --from=build /build/target/release/reef-node /usr/local/bin
+# copy generated spec to top dir
+COPY --from=build /build/assets /
+ENTRYPOINT ["tail", "-f", "/dev/null"]
