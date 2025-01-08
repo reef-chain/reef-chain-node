@@ -213,7 +213,7 @@ pub fn public_testnet_config() -> Result<ChainSpec, String> {
 			],
 		),
 		// Bootnodes
-		vec!["/dns/bootnode-t1.reefscan.info/tcp/30333/p2p/12D3KooWKJUNZLSpJ4WeARmrctswDEa57JsXCi8FCF1seEkQHMVg".parse().unwrap()],
+		vec!["/dns/bootnode-t1.reefscan.info/tcp/30333/ws/p2p/12D3KooWKJUNZLSpJ4WeARmrctswDEa57JsXCi8FCF1seEkQHMVg".parse().unwrap()],
 		// Telemetry
 		TelemetryEndpoints::new(vec![(TELEMETRY_URL.into(), 0)]).ok(),
 		// Protocol ID
