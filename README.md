@@ -149,4 +149,4 @@ If running a node doesn't connect to peers automatically you can specify `-- boo
 `--bootnodes /dns/mainnet-bootnode1.reefscan.info/tcp/30333/ws/p2p/12D3KooWFHSc9cUcyNtavUkLg4VBAeBnYNgy713BnovUa9WNY5pp`
 
 For testnet:
-`--bootnodes /dns/bootnode-t1.reefscan.info/tcp/30333/ws/p2p/12D3KooWKJUNZLSpJ4WeARmrctswDEa57JsXCi8FCF1seEkQHMVg`
+`--bootnodes /dns/bootnode-t1.reefscan.info/tcp/30333/ws/p2p/12D3KooWBBX92D9RV8TMj992HAM11xgfGNYRfNrJQcJXioE8k8MX`
