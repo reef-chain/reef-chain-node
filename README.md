@@ -6,7 +6,7 @@ To learn more about Reef chain, please refer to **[Documentation](https://docs.r
 ### Clone
 To clone the repo with its submodules run:
 ```bash
-git clone --recursive https://github.com/reef-defi/reef-chain
+git clone --recursive https://github.com/reef-chain/reef-chain-node
 ```
 
 ### Rust Setup
